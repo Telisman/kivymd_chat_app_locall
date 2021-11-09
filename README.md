@@ -4,10 +4,10 @@ It contains a system for registration and logging, as well as a socket and threa
 
 
 Models you need to include:
-Kivy
-KivyMD
-sqlite3
-Buildozer
-Socket
-Threading
-MDDialog
+Kivy,
+KivyMD,
+sqlite3,
+Buildozer,
+Socket,
+Threading,
+MDDialog,
