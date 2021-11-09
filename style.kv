@@ -1,0 +1,138 @@
+ScreenManager:
+    Screen:
+        MDBoxLayout:
+            orientation:'vertical'
+
+            MDToolbar:
+                title: 'Welcome'
+                halign: 'center'
+                md_bg_color: .2, .2, .2, 1
+                specific_text_color: 1, 1, 1, 1
+
+
+            MDBottomNavigation:
+                panel_color: .2, .2, .2, 1
+
+                MDBottomNavigationItem:
+                    name: 'Home'
+                    text: 'Home'
+                    icon: 'home'
+
+                    MDLabel:
+                        text: 'Welcome to ChateApp'
+                        halign: 'center'
+
+
+                MDBottomNavigationItem:
+                    name: 'screen 2'
+                    text: 'Login'
+                    icon: 'login'
+
+                    MDTextFieldRound:
+                        id: user1
+                        icon_left: "account"
+                        hint_text: "Username"
+                        pos_hint:{"center_x": .5, "center_y": .65}
+                        size_hint: 0.5 , 0.08
+
+                    MDTextFieldRound:
+                        id: password1
+                        icon_left: "key"
+                        hint_text: "password"
+                        pos_hint:{"center_x": .5, "center_y": .55}
+                        size_hint: 0.5 , 0.08
+                        password: True
+
+                    MDIconButton:
+                        icon: "login"
+                        user_font_size: "34sp"
+                        pos_hint:{"center_x": .5, "center_y": .35}
+                        on_press: app.login()
+
+
+
+
+                MDBottomNavigationItem:
+                    name: 'screen 3'
+                    text: 'Register'
+                    icon: 'account-box'
+
+                    MDTextFieldRound:
+                        id: user
+                        icon_left: "account"
+                        hint_text:"Enter UserName"
+                        halign: 'center'
+                        size_hint: 0.5 , 0.08
+                        pos_hint:{"center_x": .5, "center_y": .75}
+
+                    MDTextFieldRound:
+                        id: password
+                        icon_left: "key"
+                        hint_text:"Password"
+                        halign: 'center'
+                        size_hint: 0.5 , 0.08
+                        pos_hint:{"center_x": .5, "center_y": .65}
+                        password: True
+
+
+                    MDTextFieldRound:
+                        id: email
+                        icon_left: "email"
+                        hint_text:"Enter UserName"
+                        halign: 'center'
+                        size_hint: 0.5 , 0.08
+                        pos_hint:{"center_x": .5, "center_y": .55}
+
+
+                    MDIconButton:
+                        icon: "account-box"
+                        user_font_size: "34sp"
+                        pos_hint:{"center_x": .5, "center_y": .35}
+                        on_press: app.register()
+
+
+
+    Screen:
+        name:'screen2'
+
+        MDTextField:
+            id: IP_address
+            text:"192.168.56."
+            size_hint: 0.33 , None
+            pos_hint:{"center_x": .55, "center_y": .95}
+        MDTextField:
+            id: chat_nick
+            hint_text:"Nick"
+            size_hint: 0.33 , None
+            pos_hint:{"center_x": .2, "center_y": .95}
+        MDIconButton:
+            id: connection_btn
+            icon: "access-point"
+            pos_hint:{"center_x": .88, "center_y": .95}
+            on_press: app.connect_to_server()
+
+
+        MDLabel:
+            id: chat_history
+            md_bg_color: 0.729, 0.701, 0.729, 1
+            line_color:1, 1, 1, 1
+            size_hint: 0.95 , 0.77
+            radius: [15]
+            pos_hint:{"center_x": .5,"center_y": .5}
+
+
+
+        MDTextFieldRect:
+            id:chat_text
+            multiline: True
+            size_hint: 0.75 , 0.09
+            pos_hint:{"center_x": .41,"center_y": .06}
+
+        MDIconButton:
+            id: send_text_btn
+            icon: "send"
+            pos_hint:{"center_x": .88, "center_y": .06}
+            disabled: True
+            on_press: app.sent_message()
+
+
