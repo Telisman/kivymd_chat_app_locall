@@ -11,3 +11,9 @@ Buildozer,
 Socket,
 Threading,
 MDDialog,
+
+
+For installing application on your android mobile device, you need to transfer AppChat-0.1-armeabi-v7a-debug file to your mobile.
+
+
+THIS IS LOCAL MOBILE APP, IT WILL NOT WORK IF USERS ARE NOT CONNECTED TO SAME IP ADDRESS!!
